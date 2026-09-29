@@ -1,0 +1,82 @@
+:root {
+  --ink: #17212b;
+  --muted: #637078;
+  --line: #d3dfdb;
+  --paper: #ffffff;
+  --mint: #dceeff;
+  --green: #17649a;
+  --coral: #c65353;
+}
+
+* { box-sizing: border-box; }
+button, input, select { font: inherit; }
+button { cursor: pointer; }
+
+.app-shell { min-height: 100vh; background: radial-gradient(circle at 85% 8%, #c7e5ff 0, transparent 25%), linear-gradient(135deg, #eaf6ff 0%, #f7fbff 65%, #dcefff 100%); }
+.navbar { display: flex; align-items: center; gap: 12px; max-width: 1180px; margin: auto; padding: 24px 32px; color: var(--green); font-weight: 700; letter-spacing: .02em; }
+.logo-mark { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--green); color: white; font-size: 13px; }
+.dashboard { max-width: 1180px; margin: auto; padding: 46px 32px 64px; }
+.intro { display: flex; justify-content: space-between; gap: 40px; align-items: end; margin-bottom: 42px; }
+.intro h1 { max-width: 620px; margin: 8px 0 12px; font-size: clamp(2.4rem, 6vw, 5.5rem); line-height: .94; letter-spacing: -.07em; }
+.intro p:not(.eyebrow) { max-width: 500px; color: var(--muted); }
+.eyebrow { margin: 0; color: var(--green); font-size: .74rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.counter-panel, .report-form, .api-panel { border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.72); box-shadow: 0 18px 45px rgba(49, 70, 60, .08); }
+.counter-panel { display: grid; min-width: 190px; padding: 20px; gap: 8px; }
+.counter-panel span { color: var(--muted); font-size: .8rem; }
+.counter-panel strong { color: var(--green); font-size: 3rem; line-height: 1; }
+.counter-panel button, .item-meta button { border: 0; border-radius: 8px; padding: 9px 12px; background: var(--mint); color: var(--green); font-weight: 700; }
+.item-meta .edit-button { width: 32px; height: 32px; padding: 0; background: #d8edff; color: var(--green); font-size: 1.1rem; }
+.review-panel { margin-top: 18px; padding: 20px; border: 1px solid #b8d8ef; border-radius: 12px; background: #eef8ff; }
+.review-panel .section-heading { align-items: center; }
+.review-panel h2 { margin: 0; }
+.review-panel .section-heading button { border: 0; border-radius: 7px; padding: 7px 10px; color: var(--green); background: var(--mint); font-weight: 700; }
+.review-panel dl { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px 24px; margin: 18px 0 0; }
+.review-panel dl div { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid #cce3f2; padding-bottom: 7px; }
+.review-panel dt { color: var(--muted); }
+.review-panel dd { margin: 0; color: var(--ink); font-weight: 700; text-align: right; }
+.content-grid { display: grid; grid-template-columns: minmax(230px, .75fr) 1.25fr; gap: 28px; align-items: start; }
+.report-form, .api-panel { padding: 26px; }
+h2 { margin: 7px 0 22px; font-size: 1.7rem; letter-spacing: -.04em; }
+.report-form label { display: grid; gap: 7px; margin: 16px 0; color: var(--muted); font-size: .88rem; font-weight: 700; }
+input, select { width: 100%; border: 1px solid var(--line); border-radius: 8px; padding: 11px 12px; color: var(--ink); background: #fbfcf9; }
+input:focus, select:focus { outline: 2px solid var(--mint); border-color: var(--green); }
+.primary-button { width: 100%; margin-top: 8px; border: 0; border-radius: 8px; padding: 12px; background: var(--green); color: white; font-weight: 800; }
+.javascript-panel { margin-bottom: 28px; padding: 26px; border: 1px solid #b8d8ef; border-radius: 18px; background: rgba(235, 247, 255, .84); box-shadow: 0 18px 45px rgba(54, 111, 150, .09); }
+.panel-description { margin: 0 0 18px; color: var(--muted); }
+.panel-description code { padding: 3px 6px; border-radius: 5px; color: var(--green); background: #d8edff; font-size: .88em; }
+.js-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.js-actions button { border: 1px solid #9dc9e8; border-radius: 8px; padding: 10px 13px; color: var(--green); background: #fff; font-weight: 700; }
+.js-actions button:first-child { border-color: var(--green); color: #fff; background: var(--green); }
+.js-actions button:hover { transform: translateY(-1px); box-shadow: 0 5px 12px rgba(43, 105, 147, .14); }
+.dom-output { margin: 16px 0; padding: 11px 13px; border-left: 3px solid #62a9da; color: #315d78; background: #dff1ff; }
+.function-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.function-grid div { display: grid; gap: 6px; padding: 13px; border: 1px solid #c4e0f3; border-radius: 10px; background: rgba(255,255,255,.66); }
+.function-grid strong { font-size: .82rem; }
+.function-grid span { color: var(--muted); font-size: .84rem; }
+.section-heading { display: flex; align-items: end; justify-content: space-between; border-bottom: 1px solid var(--line); }
+.section-heading h2 { margin-bottom: 16px; }
+.section-heading > span { padding-bottom: 19px; color: var(--muted); font-size: .85rem; }
+.item-list { display: grid; gap: 10px; margin-top: 14px; }
+.item-card { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 17px 18px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); }
+.item-card h3 { margin: 0 0 4px; font-size: 1rem; }
+.item-card p { margin: 0; color: var(--muted); font-size: .88rem; }
+.item-meta { display: flex; align-items: center; gap: 10px; }
+.status { border-radius: 99px; padding: 5px 9px; font-size: .7rem; font-weight: 800; }
+.status-lost { background: #fae0d9; color: var(--coral); }
+.status-found { background: var(--mint); color: var(--green); }
+.api-panel { display: flex; justify-content: space-between; gap: 30px; margin-top: 28px; }
+.api-panel h2 { margin-bottom: 0; }
+.api-panel > p { color: var(--muted); }
+.api-panel ul { min-width: 45%; margin: 0; padding-left: 20px; color: var(--muted); }
+.api-panel li { margin: 6px 0; }
+
+@media (max-width: 720px) {
+  .navbar, .dashboard { padding-left: 20px; padding-right: 20px; }
+  .dashboard { padding-top: 30px; }
+  .intro, .api-panel { display: block; }
+  .counter-panel { margin-top: 26px; }
+  .content-grid { grid-template-columns: 1fr; }
+  .api-panel ul { margin-top: 18px; }
+  .function-grid { grid-template-columns: 1fr; }
+  .review-panel dl { grid-template-columns: 1fr; }
+}
